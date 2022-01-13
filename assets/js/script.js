@@ -20,7 +20,7 @@ const share = document.getElementById("share")
 const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
 
-const playgroundEndpoint = `http://localhost:3003/api/1.0.1/play`
+const playgroundEndpoint = `https://infant-sandbox.herokuapp.com/api/1.0.1/play`
 
 
 run.addEventListener("click", async () => {
