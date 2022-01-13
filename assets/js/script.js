@@ -19,4 +19,23 @@ const share = document.getElementById("share")
 
 const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
+async function getOutput(textArea) {
+    let codeArray = textArea.value.split("\n")
+    
+    let data = {
+        code: codeArray
+    }
+
+    let response = await fetch(playgroundEndpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    })
+
+    let responseData = await response.json()
+
+    return responseData
+}
 })
