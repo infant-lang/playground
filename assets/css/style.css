@@ -51,6 +51,7 @@ h1 {
     gap: 1rem;
     font-size: 1rem;
     justify-content: space-between;
+    padding-top: 0;
 }
 
 .headingContainer span {
@@ -76,6 +77,10 @@ h1 {
     cursor: pointer;
 }
 
+.option > span , .option > img {
+    pointer-events: none;
+}
+
 .option select {
     border: 0;
     outline: none;
@@ -86,17 +91,14 @@ h1 {
 .playground {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    gap: 2rem;
+    padding: 0.5rem 1.5rem;
+    gap: 1rem;
 }
 
 .playground textarea {
     resize: vertical;
     outline: none;
     border-radius: 8px;
-
-    padding-left: 36px;
-    padding-top: 13px;
     
     border: 1px solid var(--orange);
     font-size: 1rem;
@@ -107,19 +109,20 @@ h1 {
 }
 
 #code {
-    background: url(http://i.imgur.com/2cOaJ.png);
-    background-attachment: local;
-    background-repeat: no-repeat;
-    background-size: 2rem;
     height: 350px;
     background-color: var(--textareaBackground);
+}
+
+#output {
+    padding: 20px;
+    height: 180px;
 }
 
 @media (max-width: 30em) {
     .options {
         flex-direction: column;
     }
-    .headingContainer span {
+    .headingContainer, .headingContainer span {
         text-align: center;
     }
 }
