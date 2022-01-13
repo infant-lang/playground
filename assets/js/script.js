@@ -19,6 +19,8 @@ const share = document.getElementById("share")
 
 const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
+
+const playgroundEndpoint = `http://localhost:3003/api/1.0.1/play`
 async function getOutput(textArea) {
     let codeArray = textArea.value.split("\n")
     
