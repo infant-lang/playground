@@ -39,3 +39,9 @@ async function getOutput(textArea) {
     return responseData
 }
 })
+function renderOutput(jsonResponse, outputTextArea) {
+    console.log(jsonResponse)
+    outputTextArea.value = ""
+    let output = jsonResponse.output
+    outputTextArea.value = output
+}
