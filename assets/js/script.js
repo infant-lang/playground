@@ -19,9 +19,14 @@ const share = document.getElementById("share")
 
 const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
-
+const home = document.querySelectorAll(".home")
 const playgroundEndpoint = `https://infant-sandbox.herokuapp.com/api/1.0.1/play`
 
+home.forEach(e => {
+    e.addEventListener("click", () => {
+        window.location.href = "https://infant-lang.netlify.app"
+    })
+})
 
 run.addEventListener("click", async () => {
     let response = await getOutput(codeTextArea)
