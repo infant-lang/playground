@@ -1,5 +1,7 @@
 :root {
     --orange: #ff8c00;
+    --textareaShadow: 0 0 9px 2px #44444444;
+    --textareaBackground: #f0f0f0;
 }
 
 * {
@@ -17,7 +19,7 @@ h1 {
     margin: 0;
 }
 
-.header {
+.header, .options {
     align-items: center;
     display: flex;
     flex: 1;
@@ -43,4 +45,49 @@ h1 {
 
 .header span:nth-child(2) {
     font-weight: 700;
+}
+
+.options {
+    gap: 1rem;
+    font-size: 1rem;
+    justify-content: space-between;
+}
+
+.headingContainer span {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.optionsContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px;
+    border: 1px solid var(--orange);
+    width: max-content;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.option select {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    height: 1.35rem;
+}
+
+@media (max-width: 30em) {
+    .options {
+        flex-direction: column;
+    }
+    .headingContainer span {
+        text-align: center;
+    }
 }
