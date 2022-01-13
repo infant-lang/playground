@@ -21,6 +21,14 @@ const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
 
 const playgroundEndpoint = `http://localhost:3003/api/1.0.1/play`
+
+
+run.addEventListener("click", async () => {
+    let response = await getOutput(codeTextArea)
+    renderOutput(response, outputTextArea)
+    scrollToElement(outputTextArea)
+})
+
 async function getOutput(textArea) {
     let codeArray = textArea.value.split("\n")
     
