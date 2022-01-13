@@ -1,0 +1,17 @@
+{
+    "short_name": "Playground",
+    "name": "Playground",
+    "description": "Infant Lang Playground",
+    "icons": [
+      {
+        "src": "./assets/images/logo.png",
+        "type": "image/png",
+        "sizes": "256x256",
+        "purpose": "any maskable"
+      }
+    ],
+    "start_url": "/",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "theme_color": "#FFFFFF"
+  }
