@@ -61,3 +61,18 @@ function returnDataForShare(textarea) {
     let output = encodeURI(outputText)
     return output
 }
+
+
+function shareLink(title, url) {
+	if (navigator.share) {
+		navigator
+			.share({
+				title: `${title}`,
+				text: "Run this code on the Infant Lang Playground!",
+				url: url,
+			})
+			.catch(() =>
+				alert("Unable to Generate Link. Copy the URL and share it!")
+			)
+	}
+}
