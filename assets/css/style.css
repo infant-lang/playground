@@ -83,6 +83,38 @@ h1 {
     height: 1.35rem;
 }
 
+.playground {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.playground textarea {
+    resize: vertical;
+    outline: none;
+    border-radius: 8px;
+
+    padding-left: 36px;
+    padding-top: 13px;
+    
+    border: 1px solid var(--orange);
+    font-size: 1rem;
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: scroll;
+}
+
+#code {
+    background: url(http://i.imgur.com/2cOaJ.png);
+    background-attachment: local;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    height: 350px;
+    background-color: var(--textareaBackground);
+}
+
 @media (max-width: 30em) {
     .options {
         flex-direction: column;
