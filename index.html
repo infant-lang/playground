@@ -2,11 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#FFFFFF"/>
+    <meta name="description" content="Infant Lang Playground">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png">
+    
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/jquery-linedtextarea.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="./assets/js/jquery-linedtextarea.js"></script>
+
     <title>Infant Lang Playground</title>
 </head>
 <body>
@@ -38,10 +45,19 @@
             </div>
         </div>
         <div class="playground">
-            <textarea name="code" id="code" cols="30" rows="10"></textarea>
-            <textarea name="output" id="output" cols="30" rows="10"></textarea>
+            <textarea name="code" id="code" cols="30" rows="10" aria-label="Enter Infant Script"></textarea>
+            <textarea name="output" id="output" cols="30" rows="10" aria-label="Output of your Script"></textarea>
         </div>
     </div>
     <script src="./assets/js/script.js"></script>
+    <script>
+        if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Failure: ', err));
+            })
+        }
+    </script>
 </body>
 </html>
