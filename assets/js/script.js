@@ -70,6 +70,11 @@ function returnDataForShare(textarea) {
     return output
 }
 
+share.addEventListener("click", async (e) => {
+	let title = "Infant Lang Script File"
+	let url = window.location.href + "?code=" + returnDataForShare(codeTextArea)
+	shareLink(title, url)
+})
 
 function shareLink(title, url) {
 	if (navigator.share) {
