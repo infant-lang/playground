@@ -55,3 +55,9 @@ function renderOutput(jsonResponse, outputTextArea) {
     let output = jsonResponse.output
     outputTextArea.value = output
 }
+
+function returnDataForShare(textarea) {
+    let outputText = textarea.value.toString()
+    let output = encodeURI(outputText)
+    return output
+}
