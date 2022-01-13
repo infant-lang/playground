@@ -38,7 +38,15 @@ async function getOutput(textArea) {
 
     return responseData
 }
-})
+
+function scrollToElement(element) {
+    element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+    })
+}
+
 function renderOutput(jsonResponse, outputTextArea) {
     console.log(jsonResponse)
     outputTextArea.value = ""
