@@ -22,7 +22,7 @@ const loadingGifSrc = "/assets/images/loading.gif"
 const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
 const home = document.querySelectorAll(".home")
-const playgroundEndpoint = `https://infant-sandbox.herokuapp.com/api/1.0.1/play`
+const playgroundEndpoint = `https://infant-sandbox.herokuapp.com/api/stable/play`
 
 home.forEach(e => {
     e.addEventListener("click", () => {
