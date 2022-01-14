@@ -31,6 +31,7 @@ home.forEach(e => {
 })
 
 run.addEventListener("click", async () => {
+    addLoadingGif(outputTextArea, loadingGifSrc, true)
     let response = await getOutput(codeTextArea)
     renderOutput(response, outputTextArea)
     scrollToElement(outputTextArea)
@@ -65,8 +66,7 @@ function scrollToElement(element) {
 }
 
 function renderOutput(jsonResponse, outputTextArea) {
-    console.log(jsonResponse)
-    outputTextArea.value = ""
+    addLoadingGif(outputTextArea, null, false)
     let output = jsonResponse.output
     outputTextArea.value = output
 }
