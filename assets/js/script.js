@@ -17,6 +17,8 @@ $(document).ready(() => {
 const run = document.getElementById("run")
 const share = document.getElementById("share")
 
+const loadingGifSrc = "/assets/images/loading.gif"
+
 const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
 const home = document.querySelectorAll(".home")
