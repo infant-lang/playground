@@ -94,3 +94,16 @@ function shareLink(title, url) {
 			)
 	}
 }
+
+function addLoadingGif(textArea, src, setLoading) {
+    if(setLoading) {
+        textArea.value = ""
+        textArea.style.backgroundImage = "url('" + src + "')"
+        textArea.style.backgroundRepeat = 'no-repeat'
+        textArea.style.backgroundPosition = 'center'
+        textArea.style.backgroundSize = 'contain'
+
+        return true
+    }
+    textArea.style.backgroundImage = "none"   
+}
