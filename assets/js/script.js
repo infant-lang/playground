@@ -22,7 +22,7 @@ const loadingGifSrc = "/assets/images/loading.gif"
 const codeTextArea = document.getElementById("code")
 const outputTextArea = document.getElementById("output")
 const home = document.querySelectorAll(".home")
-const playgroundEndpoint = `https://infant.onrender.com/api/stable/play`
+const playgroundEndpoint = `https://infant-lang-sandbox.cybernode.dev/api/stable/play`
 
 home.forEach(e => {
     e.addEventListener("click", () => {
